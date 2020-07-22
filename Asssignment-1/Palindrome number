@@ -1,0 +1,25 @@
+package javaprograms;
+import java.util.*;
+public class Nopalindromenumber
+{
+	public static void main(String args[])
+  {
+		Scanner in = new Scanner(System.in);
+		System.out.print("The number is :");
+		int num = in.nextInt();
+		int Duplicate=num;
+		int sum=0,r;
+		while(num>0)
+    {
+			r=num%10;
+			sum=(sum*10)+r;
+			num=(int)num/10;
+		}
+		if(sum==Duplicate)
+			System.out.print("The given number "+Duplicate+" is palindrome ");
+		else
+			System.out.print("The given number "+Duplicate+" is not a palindrome ");
+	    in.close();
+			
+	}
+}
