@@ -1,0 +1,15 @@
+package javaprograms;
+import java.util.*;
+public class Areaofrectangle
+{
+	public static void main(String args[])
+  {
+	Scanner in = new Scanner(System.in);
+	System.out.print("The length of the rectangle : ");
+	int l=in.nextInt();
+	System.out.print("The breadth of the rectangle : ");
+	int b=in.nextInt();
+	System.out.print("The area of the rectangle : "+ l*b);
+	in.close();
+	}
+}
