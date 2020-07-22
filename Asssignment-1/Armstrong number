@@ -1,0 +1,25 @@
+package javaprograms;
+import java.util.*;
+public class ArmstrongNumber
+{
+	public static void main(String args[])
+  {
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter the number :");
+		int num = in.nextInt();
+		String s =String.valueOf(num);
+		int len = s.length();
+		int sum=0,Duplicate=num;
+		while(num>0)
+    {
+			int r=num%10;
+			sum=sum+((int)Math.pow(r, len));
+			num=(int)num/10;
+		}
+		if(Duplicate==sum)
+			System.out.print("Yes the number "+Duplicate+" is amstrong");
+		else
+			System.out.print("No the number "+Duplicate+" is not a amstrong");
+		in.close();
+	}
+}
