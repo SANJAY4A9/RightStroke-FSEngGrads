@@ -1,10 +1,10 @@
 package packagep1;
 
-public class P 
+public class A 
 {
 	public static void display()
   {
-		System.out.println("Class P invoked");
+		System.out.println("Class A invoked");
 	}
 	public static void main(String a[]) {
 		P.display();
