@@ -22,7 +22,7 @@ public class No_of_vowels
 		// TODO Auto-generated method stub
 
 		FileInputStream fin = null;
-		try{ fin = new FileInputStream("E://RightStrokeTraining/No_of_vowles.txt");}
+		try{ fin = new FileInputStream("E://RightStrokeTraining/No_of_vowels.txt");}
 		catch(FileNotFoundException e) {	System.out.println("File not found"); }
 		
 		int val, count = 0;
