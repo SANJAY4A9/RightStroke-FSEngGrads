@@ -1,0 +1,25 @@
+public class Autoboxing_and_unboxing 
+{
+	public static void main(String a[])
+	{
+	     Integer n =new Integer(10);
+	      
+	     int i=n;
+	     System.out.println("i is: " +n);
+	     System.out.println("Value of i: " +i);
+
+	     Character chr ='a';
+
+	     char ch = chr;
+	     System.out.println("ch is: " +ch);
+	     System.out.println("chr is: " +chr);
+	     	     
+	     Float fo = 10.5f;
+	     
+	     float fv=fo;
+	     
+	     System.out.println("Float is : " +fo);
+	     System.out.println("fv is: " +fv);
+	}
+
+}
