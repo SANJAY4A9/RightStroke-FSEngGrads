@@ -10,14 +10,14 @@ public class Java_copy_file {
         //opening Input file
         try
         {
-        	fin=new FileInputStream("E://rightstroketraining/file_to_check_vowels.txt");
+        	fin=new FileInputStream("E://RightStroketraining/check_vowels.txt");
         }
         catch(FileNotFoundException e) {System.out.println("File not found");}
         
         //opening output file
         try
         {
-        	fout=new FileOutputStream("E://rightstroketraining/file_to_check_vowels1.txt");
+        	fout=new FileOutputStream("E://RightStroketraining/check_vowels.txt");
         }
         catch(FileNotFoundException e) {System.out.print("File unable to open");}
         
@@ -37,4 +37,4 @@ public class Java_copy_file {
         
 	}
 
-}+
+}
