@@ -1,0 +1,40 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class No_of_vowels
+{
+	public static boolean isVowel(char ch)
+	{
+		ch=Character.toLowerCase(ch);
+		String s="";
+		s=ch+"";
+		s.trim();
+		char[] chi = s.toCharArray(); 
+		for(char c : chi)
+			if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
+			  return true;
+		return false;
+	}
+
+	public static void main(String[] args) throws IOException 
+	{
+		// TODO Auto-generated method stub
+
+		FileInputStream fin = null;
+		try{ fin = new FileInputStream("E://RightStrokeTraining/No_of_vowles.txt");}
+		catch(FileNotFoundException e) {	System.out.println("File not found"); }
+		
+		int val, count = 0;
+		while((val = fin.read()) != -1)
+		{
+		    char ch = (char)val;
+		    if(isVowel(ch))
+		    	count++;
+		}
+		System.out.println("No of vowels are:"+count);
+
+	}
+
+
+}
