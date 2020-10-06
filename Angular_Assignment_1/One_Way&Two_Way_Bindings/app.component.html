@@ -1,0 +1,24 @@
+<div class="container">
+    <!-- One way data binding -->
+    <div>
+        <p>Good morning everyone.Iam {{name}}</p> 
+    </div>
+   
+    <!-- Two way data binding -->
+    <div>
+        <label>Username:</label>
+        <input [(ngModel)]="Firstname"/>
+    </div>
+    
+    
+    <!-- Event binding -->
+    <div>
+        <button (click)="read(Firstname)">Submit</button>
+    </div>
+    
+    <!-- Property binding -->
+    <div>
+        <p>This is a lion image</p>
+        <img [src]="url" alt="" widht="400" height="250">
+    </div>
+</div>
