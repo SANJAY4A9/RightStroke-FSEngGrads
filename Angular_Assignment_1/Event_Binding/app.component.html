@@ -1,0 +1,24 @@
+<div class="container">
+     <div>
+         <input (keyup)="onkey($event)"/>
+         <br>
+         <p>This is box key entry value is {{name}}</p>
+     </div>
+
+     <div>
+        <input #box (keyup.enter)="onenter(box.value)"/>
+        <br>
+        <p>This is box key enter value is {{value}}</p>
+     </div> 
+     
+     <div>
+        <input #box1 (keydown.Shift.A)="onenter1(box1.value)"/>
+        <br>
+        <p>This is box keyup+shift+a is {{val}}</p>
+     </div>
+
+     <div>
+         <button (click)="Hit()">Submit</button>
+         <p>{{User}}</p>
+     </div>
+</div>
