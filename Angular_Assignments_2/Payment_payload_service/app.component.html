@@ -1,0 +1,83 @@
+<div class="container"> 
+     <h1>Payment section</h1>
+     <br>
+    <form [formGroup]="myform"  (ngSubmit)="assign();">
+
+      <div class="form-group row">
+        <label for="input1" class="col-sm-2 col-form-label">User Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="User Name" id="input1" formControlName="UserName">
+          <small *ngIf="myform.get('UserName').touched && myform.get('UserName').hasError('required')">Enter the Username</small>
+        </div>
+      </div>
+     
+      <div class="form-group row">
+        <label for="input2" class="col-sm-2 col-form-label">Account No</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Your Account no" id="input2" formControlName="Account_No_From">
+          <small *ngIf="myform.get('Account_No_From').touched && myform.get('Account_No_From').hasError('required')">Enter your Account No</small>
+        </div>
+      </div>
+     
+      <div class="form-group row"> 
+        <label class="col-sm-2 col-form-label">Account No</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  placeholder="Beneficiary Account no" formControlName="Account_No_To">
+          <small *ngIf="myform.get('Account_No_To').touched && myform.get('Account_No_To').hasError('required')">Enter the beneficiary Account No</small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+           <label class="col-sm-2 col-label-form">Curreny</label>
+           <div class="col-sm-10">
+              <select  class="custom-select" formControlName="curr">
+                  <option value="" disabled>Choose the currency</option>
+                  <option *ngFor="let cnt of currency" value={{cnt.code}} >{{cnt.name}}</option>
+              </select>
+              <small *ngIf="myform.get('curr').touched && myform.get('curr').hasError('required')">Please select the currency</small>
+           </div>
+      </div>
+     
+      <div class="form-group row"> 
+        <label class="col-sm-2 col-label-form">Amount </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" class="form-control" formControlName="amount" >
+          <small *ngIf="myform.get('amount').touched && myform.get('amount').hasError('required')">Enter the amount</small>
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-group row">
+        <button type="submit" class="btn btn-primary" [disabled]="!myform.valid" data-toggle="modal" data-target="#exampleModalCenter">
+          Pay
+        </button>
+      </div>
+    </form>
+
+    <div class="modal fade" id="exampleModalCenter" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Your Payment Status</h5>
+          </div>
+          <div class="modal-body">
+            <div *ngIf="Insuffiecient_Amount">
+              In your account you have insufficient amount 
+            </div>
+            <div *ngIf="Wrong_Id">
+              You have enterd a wrong username.
+            </div>
+            <div *ngIf="Wrong_Acc_no">
+              You have entered a wrong account number;
+            </div>
+            <div *ngIf="Everything_good">
+               Payment is done successfully.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary" (click)="reset()" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
