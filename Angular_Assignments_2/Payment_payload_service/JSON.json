@@ -1,0 +1,12 @@
+{
+    "Sanjay":
+    [
+         {
+             "Id":1,
+             "Customer_Id":"Sai venkata sanjay",
+             "Amount":024014,
+             "My_Acc_no":IB10285268875424,
+             "Beneficiary_Acc_no": 4865768257
+         }
+    ]
+}
