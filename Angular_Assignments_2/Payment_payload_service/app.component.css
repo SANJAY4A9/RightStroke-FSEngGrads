@@ -1,0 +1,19 @@
+.container{
+    padding-top: 10%;
+    padding-left: 10%;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+input.ng-touched.ng-invalid
+{
+    border : 1px solid red;
+}
+
+select.ng-touched.ng-invalid
+{
+    border: 1px solid red;
+}
