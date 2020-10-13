@@ -1,0 +1,41 @@
+<div class="container p-20">
+  <select  [(ngModel)]="k">
+    <option *ngFor="let cnt of countries" [value]="cnt.Id">{{cnt.Country}}</option>
+  </select>
+</div>
+<br>
+<div class="container">
+  <div [ngSwitch]="k">
+    <div *ngSwitchCase="1">
+      <div class="container">
+        <div>
+          <label>User name:</label>
+          <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <div>
+          <label>Aadhar number:</label>
+          <input type="text" class="form-control" placeholder="Aadhar">
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="2">
+      <div class="container">
+        <div>
+          <label>SSN number:</label>
+          <input type="number" class="form-control" placeholder="SSN number">
+        </div>
+        <div>
+          <label>Passport ID:</label>
+          <input type="number" class="form-control" placeholder="Passport ID">
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="3">
+      <div class="container">
+        <div>
+          <label>Password:</label>
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+    </div>
+</div>
+</div>
