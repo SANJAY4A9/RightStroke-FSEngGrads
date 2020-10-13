@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {ForexserviceService} from './Forex_calculation_service';
+import {ForexserviceService} from './forexservice.service';
 
 @Component({
   selector: 'app-root',
