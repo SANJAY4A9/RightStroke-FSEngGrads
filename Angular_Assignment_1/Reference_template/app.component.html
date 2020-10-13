@@ -1,0 +1,13 @@
+<div class="container">
+    <div>
+        <select #select [(ngModel)]="citySelected" (change)="log(select.value)">
+            <option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <button (click)="Str=''">clear</button>
+    </div>
+
+    {{Str}}
+</div>
