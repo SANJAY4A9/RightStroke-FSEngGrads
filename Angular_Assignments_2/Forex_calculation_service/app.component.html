@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Forexconversion</h1>
+  <div>
+    <p>
+      <strong>From : </strong>
+      <select  [(ngModel)]="From">
+        <option *ngFor="let cnt of currency" value={{cnt.id}}>{{cnt.code}}</option>
+      </select>
+   
+      <strong> To : </strong>
+      <select  [(ngModel)]="To">
+        <option *ngFor="let cnt of currency">{{cnt.code}}</option>
+      </select>  
+    </p>
+  </div>
+
+  <div>
+    <p>
+       Enter the amount: <input type="number" placeholder="Amount" [(ngModel)]="value"/>  
+    </p>
+    <p>
+      <button (click)="caluclate()" class="btn btn-primary" >Calculate</button>
+    </p>
+  </div>
+   
+   <p>The amount in {{To}} is : <strong>{{Result | currency:code}}</strong>  </p>
+</div>
