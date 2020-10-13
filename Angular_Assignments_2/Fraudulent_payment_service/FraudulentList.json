@@ -1,0 +1,30 @@
+{
+    "Customer1":
+    [
+        {
+            "Id":1,
+             "Customer_Id":"Sanjay",
+             "Amount": 22999,
+             "My_Acc_no":"IBI17583890273",
+             "Beneficiary_Acc_no":"16131885469"
+        }
+    ],
+    "BannedCurrencies":
+    
+        {
+            "curr1": "HTC", 
+            "curr2": "NYC",
+            "curr3": "KTC",
+            "curr4": "NHC"
+        },
+    
+    "BannedAccounts":
+    
+        {
+            "acc1": "21166262666",
+            "acc2": "64911423353",
+            "acc3": "10318391319",
+            "acc4": "63064613049"
+        }
+    
+}
