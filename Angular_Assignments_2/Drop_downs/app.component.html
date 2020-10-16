@@ -1,0 +1,53 @@
+<div class="container">
+   
+    <div class="form-group row">
+        <label class="col-sm-2 col-label-form">Select Customer:</label>
+        <div class="col-sm-10">
+           <select  class="custom-select">
+               <option value="" >Choose the customer type</option>
+               <option *ngFor="let cnt of customerTypes">{{cnt.name}}</option>
+           </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-label-form">Select currency:</label>
+        <div class="col-sm-10">
+           <select  class="custom-select">
+               <option value="" >Choose the currency</option>
+               <option *ngFor="let cnt of currency">{{cnt.code}}</option>
+           </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-label-form">Select Credit Card Type:</label>
+        <div class="col-sm-10">
+           <select  class="custom-select">
+               <option value="" >Choose the credit type</option>
+               <option *ngFor="let cnt of  creditcardTypes">{{cnt.name}}</option>
+           </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-label-form">Select Country:</label>
+        <div class="col-sm-10">
+           <select  class="custom-select" (change)="changeCountry($event.target.value)">
+               <option value="" >Choose the currency</option>
+               <option *ngFor="let cnt of countryList" value={{cnt.id}} >{{cnt.name}}</option>
+           </select>
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <label class="col-sm-2 col-label-form">Select City:</label>
+        <div class="col-sm-10">
+           <select  class="custom-select">
+               <option value="" >Choose the city</option>
+               <option *ngFor="let cnt of cities">{{cnt}}</option>
+           </select>
+        </div>
+    </div>
+        
+</div>
