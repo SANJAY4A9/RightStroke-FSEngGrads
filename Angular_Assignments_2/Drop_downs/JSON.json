@@ -1,0 +1,35 @@
+{
+    "countryList": [
+        { "id":0,"name": "Germany", "cities": ["Duesseldorf", "Leinfelden-Echterdingen", "Eschborn"] },
+        { "id":1,"name": "Spain", "cities": ["Barcelona","Dech","Eroti","Uysi","Kripo"] },
+        { "id":2,"name": "USA", "cities": ["Downers Grove","San Francico","Godi","Lodi"] },
+        { "id":3,"name": "Mexico","cities": ["Puebla","Merio","Giodi","Luop"] },
+        { "id":4,"name": "China", "cities": ["Beijing","Hiuwai","Godiya","Gyma","Kyyu"] },
+        { "id":5,"name":"India", "cities": ["Rajahmundry","Vizag","Vijawada","Kakinada","Guntur"]}
+      ],
+    
+      "Customer_types": [
+        {"id":0,"name":"Single Account"},
+        {"id":1,"name":"Multiple Acount"},
+        {"id":2,"name":"Joint Account"}
+      ],
+
+      "Crdeitcard_types":[
+          {"name":"Visa"},
+          {"name":"Master card"},
+          {"name":"American Express"},
+          {"name":"SBI platinum"},
+          {"name":"citi Bank card"}
+      ],
+
+      "currency": [
+        {"code":"AUD"},
+        {"code":"CAD"},
+        {"code":"EUR"},
+        {"code":"GBP"},
+        {"code":"INR"},
+        {"code":"NZD"},
+        {"code":"USD"}
+    
+      ]
+}
